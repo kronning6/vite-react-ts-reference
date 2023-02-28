@@ -14,8 +14,10 @@
     "@tanstack/react-query": "^4.24.10",
     "@tanstack/react-query-devtools": "^4.24.12",
     "@tanstack/react-router": "^0.0.1-beta.82",
+    "jotai": "^2.0.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zustand": "^4.3.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

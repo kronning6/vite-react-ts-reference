@@ -11,6 +11,8 @@ import {
 } from '@tanstack/react-router';
 import HelloTailwind from './components/HelloTailwind';
 import JSONPlaceholderPhoto from './components/JSONPlaceholderPhoto';
+import JotaiComponent from './components/JotaiComponent';
+import ZustandComponent from './components/ZustandComponent';
 
 const rootRoute = new RootRoute({
   component: () => {
@@ -38,6 +40,10 @@ const rootRoute = new RootRoute({
         </div>
         <div className="container mx-auto mt-10 w-96">
           <Outlet />
+          <div className="mt-5">
+            <JotaiComponent />
+            <ZustandComponent />
+          </div>
         </div>
       </>
     );
