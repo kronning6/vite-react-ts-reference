@@ -1,9 +1,20 @@
-export default function App() {
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import HelloTailwind from './components/HelloTailwind';
+import JSONPlaceholderPhoto from './components/JSONPlaceholderPhoto';
+
+const queryClient = new QueryClient();
+
+function App() {
   return (
-    <div className="container mx-auto mt-20 w-96">
-      <div className="flex-1 rounded-md bg-green-600 pt-10 pb-10 text-gray-900">
-        <h1 className="text-center text-3xl font-bold">Hello Tailwind!</h1>
+    <QueryClientProvider client={queryClient}>
+      <div className="container mx-auto mt-20 w-96">
+        <HelloTailwind />
+        <JSONPlaceholderPhoto photoId={20} />
+        <ReactQueryDevtools />
       </div>
-    </div>
+    </QueryClientProvider>
   );
 }
+
+export default App;
