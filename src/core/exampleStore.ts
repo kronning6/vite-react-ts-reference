@@ -7,5 +7,5 @@ export interface ExampleState {
 export const useExampleStore = create<ExampleState>(set => ({
   name: 'Zustand Rocks',
   updateName: (name: string) =>
-    set((state: ExampleState) => ({ name: state.name })),
+    set((state: ExampleState) => ({ name: name })),
 }));
